@@ -2,4 +2,7 @@
     <string name="app_name">Hello World</string>
     <string name="toast_button">Send Toast</string>
     <string name="toast_content">Hello Toast</string>
+    <string name="notification_button">Send Notification</string>
+    <string name="channel_name">Test Notification</string>
+    <string name="notification_toast">You must enable notifications first</string>
 </resources>
