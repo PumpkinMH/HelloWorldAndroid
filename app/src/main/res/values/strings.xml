@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Hello World</string>
+    <string name="toast_button">Send Toast</string>
+    <string name="toast_content">Hello Toast</string>
 </resources>
