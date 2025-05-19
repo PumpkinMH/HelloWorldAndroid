@@ -3,6 +3,7 @@ package com.example.helloworld;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,7 +19,12 @@ public class InputAlertDialogFragment extends DialogFragment {
         inputField = new EditText(requireContext());
 
         builder.setMessage(R.string.input_alert_title)
-                .setPositiveButton("Enter", (dialogInterface, i) -> Toast.makeText(requireContext(),getInput(),Toast.LENGTH_SHORT).show())
+                .setPositiveButton("Enter", (dialogInterface, i) -> {
+//                    Toast.makeText(requireContext(), getInput(), Toast.LENGTH_SHORT).show();
+                    Intent outputIntent = new Intent(requireContext(), DisplayInputActivity.class);
+                    outputIntent.putExtra("com.example.helloworld.USER_INPUT", getInput());
+                    startActivity(outputIntent);
+                })
                 .setNegativeButton("Cancel", null)
                 .setView(inputField);
 
