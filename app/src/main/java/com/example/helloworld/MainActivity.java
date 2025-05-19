@@ -35,12 +35,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        toastTest();
+        notificationTest();
+
+
+    }
+
+    private void toastTest() {
         // Toast stuff
         Button toastButton = findViewById(R.id.toastButton);
         toastButton.setOnClickListener(v -> {
             Toast.makeText(this, R.string.toast_content, Toast.LENGTH_SHORT).show();
         });
+    }
 
+    private void notificationTest() {
         // Notification stuff
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
