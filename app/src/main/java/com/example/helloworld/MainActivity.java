@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -39,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
         notificationTest();
         alertDialogTest();
 
+        Button todoButton = findViewById(R.id.todoButton);
+        todoButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TodoListActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void toastTest() {
