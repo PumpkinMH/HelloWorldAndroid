@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         toastTest();
         notificationTest();
-
+        alertDialogTest();
 
     }
 
@@ -80,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, R.string.notification_toast, Toast.LENGTH_SHORT).show();
             }
+        });
+    }
+
+    private void alertDialogTest() {
+        Button inputButton = findViewById(R.id.inputButton);
+        inputButton.setOnClickListener(v -> {
+            InputAlertDialogFragment fragment = new InputAlertDialogFragment();
+            fragment.show(getSupportFragmentManager(), "InputAlert");
         });
     }
 }
